@@ -23,7 +23,7 @@ public class ValidacaoExameService {
     private void validarExameImagem(Exame exame) {
         logger.info("Validando exame de imagem do paciente: " + exame.getPaciente());
 
-        if (exame.getDescricao() == null || exame.getDescricao().isBlank()) {
+        if (exame.getLaudo() == null || exame.getLaudo().isBlank()) {
             logger.warning("Laudo de imagem não informado.");
             return;
         }
