@@ -9,9 +9,10 @@ public class OcpMain {
     public static void main(String[] args) {
 
         Exame exame = new Exame(
-                "Paciente Teste 1",
-                "IMAGEM",
-                "Laudo de ressonância magnética sem alterações."
+                "Paciente Teste 2",
+                "LABORATORIO",
+                "Envio Laudo",
+                "Hemograma completo dentro dos parâmetros esperados."
         );
 
         logger.info("Dados do exame -> " + exame);
