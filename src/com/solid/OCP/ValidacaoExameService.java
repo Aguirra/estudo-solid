@@ -11,8 +11,10 @@ public class ValidacaoExameService {
 
         if ("IMAGEM".equalsIgnoreCase(exame.getTipoExame())) {
             validarExameImagem(exame);
+
         } else if ("LABORATORIO".equalsIgnoreCase(exame.getTipoExame())) {
             validarExameLaboratorial(exame);
+
         } else {
             logger.warning("Tipo de exame não suportado: " + exame.getTipoExame());
         }
@@ -21,7 +23,7 @@ public class ValidacaoExameService {
     }
 
     private void validarExameImagem(Exame exame) {
-        logger.info("Validando exame de imagem do paciente: " + exame.getPaciente());
+        //logger.info("Validando exame de imagem do paciente: " + exame.getPaciente());
 
         if (exame.getLaudo() == null || exame.getLaudo().isBlank()) {
             logger.warning("Laudo de imagem não informado.");
@@ -32,7 +34,7 @@ public class ValidacaoExameService {
     }
 
     private void validarExameLaboratorial(Exame exame) {
-        logger.info("Validando exame laboratorial do paciente: " + exame.getPaciente());
+        //logger.info("Validando exame laboratorial do paciente: " + exame.getPaciente());
 
         if (exame.getDescricao() == null || exame.getDescricao().isBlank()) {
             logger.warning("Resultado laboratorial não informado.");

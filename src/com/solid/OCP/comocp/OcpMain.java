@@ -9,18 +9,8 @@ public class OcpMain {
 
     public static void main(String[] args) {
 
-        Exame exameImagem = new Exame(
-                "Paciente Teste 1",
-                "IMAGEM",
-                "Laudo de tomografia sem alterações."
-        );
-
-        Exame exameLaboratorio = new Exame(
-                "Paciente Teste 2",
-                "LABORATORIO",
-                "Hemograma",
-                "Hemograma completo dentro dos padrões esperados."
-        );
+        Exame exameImagem = new Exame("Paciente Teste 1","IMAGEM","Laudo de tomografia sem alterações.");
+        Exame exameLaboratorio = new Exame("Paciente Teste 2","LABORATORIO", "Hemograma", "Hemograma completo dentro dos padrões esperados.");
 
         ValidacaoExameService validacaoExameService = new ValidacaoExameService(
                 List.of(
@@ -34,5 +24,10 @@ public class OcpMain {
 
         logger.info("Validando exame laboratorial -> " + exameLaboratorio);
         validacaoExameService.validar(exameLaboratorio);
+        System.out.println("   ");
+        System.out.println("   ");
+        System.out.println("  :) ");
     }
+
+
 }
