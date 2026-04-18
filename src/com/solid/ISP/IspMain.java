@@ -1,6 +1,6 @@
 package com.solid.ISP;
 
-public class LspMain {
+public class IspMain {
 
     public static void main(String[] args) {
 
@@ -22,6 +22,11 @@ public class LspMain {
         System.out.println("\nPessoa Jurídica:");
         System.out.println("Nome: " + pessoaJuridica.getNome());
         System.out.println("Documento: " + pessoaJuridica.getDocumentoPrincipal());
+
+        if (pessoaJuridica instanceof CadastroPessoaJuridica pj) {
+            System.out.println("Razão social: " + pj.getRazaoSocial());
+        }
+
     }
 }
 

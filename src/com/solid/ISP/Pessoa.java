@@ -1,4 +1,4 @@
-package com.solid.LSP.comLsp;
+package com.solid.ISP;
 
 public abstract class Pessoa {
 

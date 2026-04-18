@@ -1,6 +1,6 @@
-package com.solid.LSP.comLsp;
+package com.solid.ISP;
 
-public class PessoaFisica extends Pessoa {
+public class PessoaFisica extends Pessoa implements CadastroPessoaFisica {
 
     private String dataNascimento;
 
@@ -9,8 +9,10 @@ public class PessoaFisica extends Pessoa {
         this.dataNascimento = dataNascimento;
     }
 
+    @Override
     public String getDataNascimento() {
         return dataNascimento;
     }
+
 }
 
